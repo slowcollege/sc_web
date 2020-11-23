@@ -1,0 +1,23 @@
+{
+  "id": "2221224",
+  "name": "sc",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5677960",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "13982920",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

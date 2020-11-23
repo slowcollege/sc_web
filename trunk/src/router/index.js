@@ -17,11 +17,19 @@ export default new Router({
       },
       {
           path: '/',
-          name: 'Main',
+          name: 'main',
           meta: {
-              title: '惠购电商',
+              title: '首页',
           },
-          component: resolve => require(['@/views/sc_home/sc_main'], resolve)
+          component: resolve => require(['@/views/sc_home/sc_main'], resolve),
+      },
+      {
+          path: '/mine',
+          name: 'mine',
+          meta: {
+              title: '个人中心',
+          },
+          component: resolve => require(['@/views/sc_home/sc_mine'], resolve),
       },
   ]
 })
