@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b841db1a-563d-4024-8824-50194d58f48d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/jf_gift_phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/jf_gift_verification.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/img_loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/upload_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/upload_video.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/views/sc_check/sc_check.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/assets/css/normal.css" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/assets/css/normal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/demo_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" afterDir="false" />
-    </list>
+    <list default="true" id="b841db1a-563d-4024-8824-50194d58f48d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -199,8 +172,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trunk/src/assets/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+            <state relative-caret-position="340">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#185#247#0" />
                 <element signature="e#8066#8369#0" />
@@ -342,15 +315,16 @@
       <updated>1605845776112</updated>
       <workItem from="1605845778619" duration="969000" />
       <workItem from="1606094927004" duration="7719000" />
-      <workItem from="1606174823208" duration="9898000" />
+      <workItem from="1606174823208" duration="10132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18586000" />
+    <option name="totallyTimeSpent" value="18820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="211" y="28" width="1628" height="1025" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15992533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -593,10 +567,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trunk/src/assets/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        <state relative-caret-position="340">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#185#247#0" />
             <element signature="e#8066#8369#0" />
