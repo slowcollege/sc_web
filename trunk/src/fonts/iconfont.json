@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "436018",
+      "name": "运动",
+      "font_class": "yundong",
+      "unicode": "e807",
+      "unicode_decimal": 59399
+    },
+    {
+      "icon_id": "4292650",
+      "name": "书",
+      "font_class": "shu",
+      "unicode": "e762",
+      "unicode_decimal": 59234
+    },
+    {
+      "icon_id": "16392815",
+      "name": "写字",
+      "font_class": "xiezi",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "18360886",
+      "name": "chevron-right",
+      "font_class": "chevron-right",
+      "unicode": "e765",
+      "unicode_decimal": 59237
+    },
+    {
+      "icon_id": "18360903",
+      "name": "chevron-left",
+      "font_class": "chevron-left",
+      "unicode": "e766",
+      "unicode_decimal": 59238
+    },
+    {
       "icon_id": "5677960",
       "name": "我的",
       "font_class": "wode",

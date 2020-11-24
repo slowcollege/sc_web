@@ -2,34 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b841db1a-563d-4024-8824-50194d58f48d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/trunk/src/api/apis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/api/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/api/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/center_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/center_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/icon_main_home_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/main_home_gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/main_home_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/demo_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/views/sc_home/sc_mine.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/jf_gift_phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/icon/jf_gift_verification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/img_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/upload_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/images/upload_video.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/assets/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trunk/src/views/sc_check/sc_check.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/config/dev.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trunk/src/assets/css/normal.css" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/assets/css/normal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trunk/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/demo_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/fonts/iconfont.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trunk/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,19 +41,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trunk/src/assets/css/normal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="373" column="1" selection-start-line="373" selection-start-column="1" selection-end-line="373" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trunk/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="521">
+              <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -63,13 +52,161 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_mine.vue">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="110" column="18" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+            <state relative-caret-position="190">
+              <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
               <folding>
-                <element signature="n#script#0;n#!!top" />
+                <element signature="e#588#603#0" />
+                <element signature="e#1004#1020#0" />
+                <element signature="e#707#723#0" />
+                <element signature="e#939#967#0" />
+                <element signature="e#1166#1182#0" />
+                <element signature="e#1368#1403#0" />
+                <element signature="e#1432#1465#0" />
+                <element signature="e#1802#1818#0" />
+                <element signature="e#2048#2064#0" />
+                <element signature="e#2268#2346#0" />
+                <element signature="e#3477#3569#0" />
+                <element signature="e#3785#3990#0" />
+                <element signature="e#4025#4226#0" />
+                <element signature="e#2645#2709#0" />
+                <element signature="e#2745#2803#0" />
+                <element signature="e#2846#2862#0" />
+                <element signature="e#3191#3223#0" />
+                <element signature="e#3426#3442#0" />
+                <element signature="e#3701#3812#0" />
+                <element signature="e#3807#3869#0" />
+                <element signature="e#4981#5018#0" />
+                <element signature="e#4941#4957#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_check/sc_check.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+              <folding>
+                <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#template#0;n#!!top" />
+                <element signature="e#295#568#0" />
+                <element signature="e#637#653#0" />
+                <element signature="e#843#861#0" />
+                <element signature="e#1013#1029#0" />
+                <element signature="e#1138#1217#0" />
+                <element signature="e#1371#1387#0" />
+                <element signature="e#1670#1698#0" />
+                <element signature="e#1502#1518#0" />
+                <element signature="e#1804#1846#0" />
+                <element signature="e#1982#2066#0" />
+                <element signature="e#2203#2287#0" />
+                <element signature="e#2329#2345#0" />
+                <element signature="e#2564#2596#0" />
+                <element signature="e#2935#3091#0" />
+                <element signature="e#3092#3184#0" />
+                <element signature="e#3631#3880#0" />
+                <element signature="e#3157#3207#0" />
+                <element signature="e#4067#4083#0" />
+                <element signature="e#4499#4507#0" />
+                <element signature="e#4604#4635#0" />
+                <element signature="e#4866#4997#0" />
+                <element signature="e#4872#4981#0" />
+                <element signature="e#7279#7642#0" />
+                <element signature="e#7670#7785#0" />
+                <element signature="e#7812#8138#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding>
+                <element signature="e#4493#4654#0" />
+                <element signature="e#4688#4787#0" />
+                <element signature="e#4823#4842#0" />
+                <element signature="e#4877#4994#0" />
+                <element signature="e#5037#5125#0" />
+                <element signature="e#5176#5442#0" />
+                <element signature="e#5551#5859#0" />
+                <element signature="e#5912#5939#0" />
+                <element signature="e#5975#6254#0" />
+                <element signature="e#6293#6547#0" />
+                <element signature="e#7036#7165#0" />
+                <element signature="e#7228#7274#0" />
+                <element signature="e#7342#7366#0" />
+                <element signature="e#7412#7437#0" />
+                <element signature="e#7490#7509#0" />
+                <element signature="e#8268#8508#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/api/apis.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/src/api/http.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="34" />
+              <folding>
+                <element signature="e#41#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/trunk/src/assets/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+              <folding>
+                <element signature="e#185#247#0" />
+                <element signature="e#8066#8369#0" />
+                <element signature="e#8413#8649#0" />
+                <element signature="e#8694#8742#0" />
+                <element signature="e#9476#9867#0" />
               </folding>
             </state>
           </provider>
@@ -82,6 +219,7 @@
       <list>
         <option value="CSS File" />
         <option value="vue File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -91,6 +229,8 @@
       <find>NavBar</find>
       <find>showTab</find>
       <find>bottom_tabbar_contain</find>
+      <find>gif_input_code</find>
+      <find>m</find>
     </findStrings>
     <replaceStrings>
       <replace>sc_</replace>
@@ -106,21 +246,24 @@
         <option value="$PROJECT_DIR$/trunk/index.html" />
         <option value="$PROJECT_DIR$/trunk/src/App.vue" />
         <option value="$PROJECT_DIR$/trunk/src/main.js" />
-        <option value="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" />
         <option value="$PROJECT_DIR$/trunk/src/views/sc_home/sc_home.vue" />
-        <option value="$PROJECT_DIR$/trunk/src/api/apis.js" />
         <option value="$PROJECT_DIR$/trunk/config/dev.env.js" />
         <option value="$PROJECT_DIR$/trunk/config/prod.env.js" />
-        <option value="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" />
-        <option value="$PROJECT_DIR$/trunk/src/router/index.js" />
-        <option value="$PROJECT_DIR$/trunk/src/assets/css/normal.css" />
         <option value="$PROJECT_DIR$/trunk/src/views/sc_home/sc_mine.vue" />
+        <option value="$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue" />
+        <option value="$PROJECT_DIR$/trunk/src/assets/css/normal.css" />
+        <option value="$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue" />
+        <option value="$PROJECT_DIR$/trunk/src/views/sc_check/sc_check.vue" />
+        <option value="$PROJECT_DIR$/trunk/src/router/index.js" />
+        <option value="$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue" />
+        <option value="$PROJECT_DIR$/trunk/src/api/apis.js" />
+        <option value="$PROJECT_DIR$/trunk/src/assets/js/common.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="25" />
+    <option name="x" value="211" />
+    <option name="y" value="28" />
     <option name="width" value="1628" />
     <option name="height" value="1025" />
   </component>
@@ -132,7 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,97 +291,19 @@
               <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="sc_web" type="462c0819:PsiDirectoryNode" />
               <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="sc_footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="sc_home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sc_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sc_web" type="462c0819:PsiDirectoryNode" />
-              <item name="trunk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="sc_login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/trunk/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/trunk/src/assets/icon" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -248,9 +312,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/trunk/src" />
       <recent name="$PROJECT_DIR$/trunk/src/assets/icon" />
+      <recent name="$PROJECT_DIR$/trunk/src/assets/images" />
       <recent name="$PROJECT_DIR$/trunk/src/fonts" />
+      <recent name="$PROJECT_DIR$/trunk/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,16 +342,17 @@
       <updated>1605845776112</updated>
       <workItem from="1605845778619" duration="969000" />
       <workItem from="1606094927004" duration="7719000" />
+      <workItem from="1606174823208" duration="9898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8688000" />
+    <option name="totallyTimeSpent" value="18586000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="25" width="1628" height="1025" extended-state="0" />
+    <frame x="211" y="28" width="1628" height="1025" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15992533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15992533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -299,7 +365,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32901832" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32901832" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -312,13 +378,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_error/sc_error.vue">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/build/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trunk/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -334,41 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/fonts/demo_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trunk/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="95" column="69" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/api/apis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -386,17 +414,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_home.vue">
+    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_home.vue" />
+    <entry file="file://$PROJECT_DIR$/trunk/src/components/sc_footer/sc_footer.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="true" selection-end-line="35" />
+        <state relative-caret-position="305">
+          <caret line="108" column="46" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/fonts/demo_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/assets/css/normal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="296" column="23" selection-start-line="296" selection-start-column="23" selection-end-line="296" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_mine.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#588#603#0" />
+            <element signature="e#1004#1020#0" />
+            <element signature="e#707#723#0" />
+            <element signature="e#939#967#0" />
+            <element signature="e#1166#1182#0" />
+            <element signature="e#1368#1403#0" />
+            <element signature="e#1432#1465#0" />
+            <element signature="e#1802#1818#0" />
+            <element signature="e#2048#2064#0" />
+            <element signature="e#2268#2346#0" />
+            <element signature="e#3477#3569#0" />
+            <element signature="e#3785#3990#0" />
+            <element signature="e#4025#4226#0" />
+            <element signature="e#2645#2709#0" />
+            <element signature="e#2745#2803#0" />
+            <element signature="e#2846#2862#0" />
+            <element signature="e#3191#3223#0" />
+            <element signature="e#3426#3442#0" />
+            <element signature="e#3701#3812#0" />
+            <element signature="e#3807#3869#0" />
+            <element signature="e#4981#5018#0" />
+            <element signature="e#4941#4957#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_check/sc_check.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#295#568#0" />
+            <element signature="e#637#653#0" />
+            <element signature="e#843#861#0" />
+            <element signature="e#1013#1029#0" />
+            <element signature="e#1138#1217#0" />
+            <element signature="e#1371#1387#0" />
+            <element signature="e#1670#1698#0" />
+            <element signature="e#1502#1518#0" />
+            <element signature="e#1804#1846#0" />
+            <element signature="e#1982#2066#0" />
+            <element signature="e#2203#2287#0" />
+            <element signature="e#2329#2345#0" />
+            <element signature="e#2564#2596#0" />
+            <element signature="e#2935#3091#0" />
+            <element signature="e#3092#3184#0" />
+            <element signature="e#3631#3880#0" />
+            <element signature="e#3157#3207#0" />
+            <element signature="e#4067#4083#0" />
+            <element signature="e#4499#4507#0" />
+            <element signature="e#4604#4635#0" />
+            <element signature="e#4866#4997#0" />
+            <element signature="e#4872#4981#0" />
+            <element signature="e#7279#7642#0" />
+            <element signature="e#7670#7785#0" />
+            <element signature="e#7812#8138#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trunk/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="521">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -405,31 +526,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_login/sc_login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_main.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/assets/css/normal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="373" column="1" selection-start-line="373" selection-start-column="1" selection-end-line="373" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trunk/src/views/sc_home/sc_mine.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="110" column="18" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+        <state relative-caret-position="135">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding>
-            <element signature="n#script#0;n#!!top" />
+            <element signature="e#4493#4654#0" />
+            <element signature="e#4688#4787#0" />
+            <element signature="e#4823#4842#0" />
+            <element signature="e#4877#4994#0" />
+            <element signature="e#5037#5125#0" />
+            <element signature="e#5176#5442#0" />
+            <element signature="e#5551#5859#0" />
+            <element signature="e#5912#5939#0" />
+            <element signature="e#5975#6254#0" />
+            <element signature="e#6293#6547#0" />
+            <element signature="e#7036#7165#0" />
+            <element signature="e#7228#7274#0" />
+            <element signature="e#7342#7366#0" />
+            <element signature="e#7412#7437#0" />
+            <element signature="e#7490#7509#0" />
+            <element signature="e#8268#8508#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/api/apis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/api/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="34" />
+          <folding>
+            <element signature="e#41#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/build/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/src/assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <element signature="e#185#247#0" />
+            <element signature="e#8066#8369#0" />
+            <element signature="e#8413#8649#0" />
+            <element signature="e#8694#8742#0" />
+            <element signature="e#9476#9867#0" />
           </folding>
         </state>
       </provider>

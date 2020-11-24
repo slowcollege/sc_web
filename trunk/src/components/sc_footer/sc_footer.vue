@@ -99,14 +99,14 @@
                         <img src="../../assets/icon/main_home_gray.png">
                         <img src="../../assets/icon/main_home_red.png">
                     </div>
-                    <p class="footer_title">电商首页</p>
+                    <p class="footer_title">我的班</p>
                 </a>
                 <a :class="obj.two" @click="gotoMine">
                     <div class="tabbar_icon">
                         <img src="../../assets/icon/center_grey.png">
                         <img src="../../assets/icon/center_red.png">
                     </div>
-                    <p class="footer_title">个人中心</p>
+                    <p class="footer_title">我的</p>
                 </a>
             </div>
         </footer>

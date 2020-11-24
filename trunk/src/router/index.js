@@ -24,12 +24,28 @@ export default new Router({
           component: resolve => require(['@/views/sc_home/sc_main'], resolve),
       },
       {
+          path: '/check',
+          name: 'check',
+          meta: {
+              title: '提交',
+          },
+          component: resolve => require(['@/views/sc_check/sc_check'], resolve),
+      },
+      {
           path: '/mine',
           name: 'mine',
           meta: {
               title: '个人中心',
           },
           component: resolve => require(['@/views/sc_home/sc_mine'], resolve),
+      },
+      {
+          path: '/login',
+          name: 'login',
+          meta: {
+              title: '登录',
+          },
+          component: resolve => require(['@/views/sc_login/sc_login'], resolve),
       },
   ]
 })
