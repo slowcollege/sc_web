@@ -5,6 +5,7 @@ import qs from 'qs'
 import m from "../assets/js/common";
 import md5 from 'js-md5';
 
+
 const http ={
     /**
      * methods: 请求
@@ -12,6 +13,9 @@ const http ={
      * @param params 请求参数
      */
     get(url,params){
+        if(!params)params = {};
+        params.token = m.getCookie('sc_token') || null;
+
         const config = {
             method: 'get',
             url:url
@@ -21,8 +25,8 @@ const http ={
     },
     //普通格式的调用
     post(url,params){
-        // params.token = m.getCookie('mallToken')||null;
-        // params.source = m.getCookie('mallSource')||null;
+        if(!params)params = {};
+        params.token = m.getCookie('sc_token') || null;
         const config = {
             method: 'post',
             url:url,
@@ -35,8 +39,8 @@ const http ={
     },
     //formdata格式的调用
     formpost(url,params){
-        // params.token = m.getCookie('mallToken')?m.getCookie('mallToken'):null;
-        // params.source = m.getCookie('mallSource')?m.getCookie('mallSource'):null;
+        if(!params)params = {};
+        params.token = m.getCookie('sc_token') || null;
         const config = {
             method: 'post',
             url:url,

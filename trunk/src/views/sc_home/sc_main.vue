@@ -1,23 +1,25 @@
 <template>
     <div class="container">
         <div class="main_top_box">
-            <div class="main_top_name">我的班</div>
-            <div class="main_top_tip">种一棵树最好的时间是十年前，其次是现在。</div>
+<!--            <div class="main_top_name">我的班</div>-->
+<!--            <div class="main_top_tip">种一棵树最好的时间是十年前，其次是现在。</div>-->
+            <div class="main_top_name">{{listInfo.className}}</div>
+            <div class="main_top_tip">{{listInfo.classDesc}}</div>
         </div>
         <div class="main_date_box jf_flex_between">
             <i class="iconfont">&#xe766;</i>
-            <div class="date">2020.11.13</div>
+            <div class="date">{{date}}</div>
             <i class="iconfont">&#xe765;</i>
         </div>
 
-        <div class="list_item_box" v-for="(item,index) in 8">
+        <div class="list_item_box" v-for="stu in listInfo.student">
             <div class="list_item_top jf_flex_between">
-                <div class="left_num"><div >0{{index+1}}</div></div>
+                <div class="left_num"><div>{{stu.code}}</div></div>
                 <div class="right_box jf_flex_col">
                     <div class="top_box jf_flex_between">
                         <div class="info_box jf_flex_col">
-                            <div class="name">张三(班长)</div>
-                            <div class="experience">已学习XX天，获得100积分</div>
+                            <div class="name">{{stu.name}} <span v-if="stu.duty">{{stu.duty}}</span></div>
+                            <div class="experience">已学习{{stu.trainingDays}}天，获得{{stu.score}}积分</div>
                         </div>
                         <div class="btn_box jf_flex_between">
                             <i class="iconfont">&#xe6d1;</i>
@@ -26,14 +28,11 @@
                         </div>
                     </div>
 
-
                     <div class="media_box jf_flex_between">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
                     </div>
-
-
                 </div>
             </div>
             <div class="list_item_bottom jf_flex_col">
@@ -44,7 +43,7 @@
         </div>
         <div class="empty_item"></div>
 
-        <div class="clock_btn" @click="goCheck"></div>
+        <div class="clock_btn" @click="goCheck">打卡</div>
 
 
 
@@ -56,18 +55,37 @@
 <script type="text/ecmascript-6">
     import util from '@/assets/js/util';
     import footer from '../../components/sc_footer/sc_footer';
+    import {getClassStudent} from '@/api/apis';
     export default {
         name: 'navbar',
         data() {
             return {
-
-
+                date:'2020-11-24',
+                studentsInfo:[],
+                listInfo:{}
             }
         },
         components: {
             'yls-footer': footer,//tab组件
         },
+        creted(){},
+        mounted(){
+            this.getListInfo();
+        },
         methods: {
+            getListInfo:function(){
+                let param = {
+                    date:this.date
+                };
+                getClassStudent(param).then((res)=>{
+                    if(res.result){
+                        this.listInfo = res.result;
+                        this.studentsInfo = res.result.student;
+                    }
+                }).catch(err=>{
+
+                })
+            },
             goCheck:function () {
                 if(!util.m.getCookie('sc_token')){
                     this.$router.push('/login')

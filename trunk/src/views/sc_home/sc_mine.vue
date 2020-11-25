@@ -5,22 +5,22 @@
         <div class="mine_content">
             <div class="mine_info_box jf_flex_between">
                 <div class="head_info_box">
-                    <div class="inner"></div>
+                    <img class="inner" :src="stuInfo.image"/>
                 </div>
                 <div class="user_info_box jf_flex_col">
-                    <div class="user_name">张三李四</div>
-                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">2020级01班</div>
-                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">学号：06</div>
+                    <div class="user_name">{{stuInfo.name}}</div>
+                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">{{stuInfo.className}}</div>
+                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">学号：{{stuInfo.code}}</div>
                 </div>
             </div>
 
             <div class="mine_func_line jf_flex_between">
                 <div class="title">学分</div>
-                <div class="content"><span>950</span>学分</div>
+                <div class="content"><span>{{stuInfo.score}}</span>学分</div>
             </div>
             <div class="mine_func_line jf_flex_between">
                 <div class="title">账号</div>
-                <div class="content">退出登录</div>
+                <div class="content" @click="outLogin">退出登录</div>
             </div>
         </div>
 
@@ -32,16 +32,34 @@
     </div>
 </template>
 <script type="text/ecmascript-6">
+    import {getStudentProfile} from '@/api/apis';
+    import util from '@/assets/js/util'
     import footer from '../../components/sc_footer/sc_footer';
     export default {
         data() {
             return {
-                msg: 'hello vue'
+                stuInfo:{},//个人中心信息
             }
         },
         components: {
             'yls-footer': footer,//tab组件
         },
+        mounted(){
+            this.getProfileInfo()
+        },
+        methods:{
+            getProfileInfo:function () {
+
+                getStudentProfile().then(res=>{
+                    if(res.result){
+                        this.stuInfo = res.result;
+                    }
+                }).catch()
+            },
+            outLogin:function () {
+
+            }
+        }
     }
 </script>
 <style scoped>

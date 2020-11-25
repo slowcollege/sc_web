@@ -1,7 +1,8 @@
 /****   request.js   ****/
 // 导入axios
 import axios from 'axios/index'
-import M from '../assets/js/common'
+import M from '../assets/js/common';
+import router from '../router/index'
 //1. 创建新的axios实例，
 const service = axios.create({
     // 公共接口--这里注意后面会讲
@@ -30,16 +31,17 @@ service.interceptors.request.use(config => {
 // 3.响应拦截器
 service.interceptors.response.use(response => {
     //接收到响应数据并成功后的一些共有的处理，关闭loading等
-    // if(response.data.code === 2){
-    //     console.log(response.data);
-    //     M.removeLoading();
-    //     M.showText('登录失效');
-    //     location.href = process.env.login;
-    //     return false;
-    // }else{
+    if(response.data.code === 3){
+        console.log(response.data);
+        // M.removeLoading();
+        // M.showText('登录失效');
+        // location.href = process.env.login;
+        // router.push('/login')
+        return false;
+    }else{
         console.log(response.data);
         return response.data
-    // }
+    }
 }, error => {
     /***** 接收到异常响应的处理开始 *****/
     if (error && error.response) {

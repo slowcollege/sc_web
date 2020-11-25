@@ -60,14 +60,14 @@
             },
             //失去焦点的时候
             onBlurInput: function () {
-                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                var input1 = document.getElementById('phoneInput');
-                var input2 = document.getElementById('codeInput');
-                input1.blur();
-                input2.blur();
-                this.$refs.phone.blur();
-                this.$refs.code.blur();
-                window.scroll(0, 0)
+                // document.body.scrollTop = document.documentElement.scrollTop = 0;
+                // var input1 = document.getElementById('phoneInput');
+                // var input2 = document.getElementById('codeInput');
+                // input1.blur();
+                // input2.blur();
+                // this.$refs.phone.blur();
+                // this.$refs.code.blur();
+                // window.scroll(0, 0)
             }
         }
     }
