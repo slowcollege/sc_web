@@ -8,6 +8,9 @@ Vue.config.productionTip = false;
 
 //css文件
 import './assets/css/normal.css';
+// import md5 from 'js-md5';
+// Vue.prototype.$md5 = md5;
+
 
 /* eslint-disable no-new */
 new Vue({

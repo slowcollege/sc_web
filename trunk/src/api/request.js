@@ -17,11 +17,11 @@ service.interceptors.request.use(config => {
     //     'Content-Type':'application/x-www-form-urlencoded' //配置请求头
     // }
     //注意使用token的时候需要引入cookie方法或者用本地localStorage等方法，推荐js-cookie
-    const token = M.getCookie('mallToken');//这里取token之前，你肯定需要先拿到token,存一下
-    if(token){
-        // config.params = {'token':token} //如果要求携带在参数中
-        config.headers.token= token; //如果要求携带在请求头中
-    }
+    // const token = M.getCookie('mallToken');//这里取token之前，你肯定需要先拿到token,存一下
+    // if(token){
+    //     // config.params = {'token':token} //如果要求携带在参数中
+    //     config.headers.token= token; //如果要求携带在请求头中
+    // }
     return config
 }, error => {
     Promise.reject(error)
@@ -30,16 +30,16 @@ service.interceptors.request.use(config => {
 // 3.响应拦截器
 service.interceptors.response.use(response => {
     //接收到响应数据并成功后的一些共有的处理，关闭loading等
-    if(response.data.code === 2){
-        console.log(response.data);
-        M.removeLoading();
-        M.showText('登录失效');
-        location.href = process.env.login;
-        return false;
-    }else{
+    // if(response.data.code === 2){
+    //     console.log(response.data);
+    //     M.removeLoading();
+    //     M.showText('登录失效');
+    //     location.href = process.env.login;
+    //     return false;
+    // }else{
         console.log(response.data);
         return response.data
-    }
+    // }
 }, error => {
     /***** 接收到异常响应的处理开始 *****/
     if (error && error.response) {
@@ -86,13 +86,13 @@ service.interceptors.response.use(response => {
             default:
                 showText = `系统异常`;
         }
-
-        M.showText(showText);
+        // console.log(showText);
+        // M.showText(showText);
     } else {
         // 超时处理
         console.log(error);
         if (JSON.stringify(error).includes('timeout')) {
-            M.showText('服务器响应超时');
+            // M.showText('服务器响应超时');
         }
         console.log('连接服务器失败')
     }

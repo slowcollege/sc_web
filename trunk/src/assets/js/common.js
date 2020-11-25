@@ -34,6 +34,30 @@ var Rxports = {
         Rxports.addCookie(sName, 1, -1);
     },
 
+    /*-------------------------jd方法---------------------------*/
+    // showLoading: function () {
+    //     jfShowTips.showLoading();
+    // },
+    // removeLoading: function () {
+    //     jfShowTips.removeLoading();
+    // },
+    // showText: function (text) {
+    //     jfShowTips.toastShow({'text': text});
+    // },
+    // showDialog: function (m, c, check) {
+    //     jfShowTips.dialogShow({
+    //         'mainText': m,
+    //         'minText': c,
+    //         'checkFn': function () {
+    //             //点击删除后做的事件
+    //             check();
+    //         }
+    //     })
+    // },
+    // removeDialog: function () {
+    //     jfShowTips.dialogRemove();
+    // },
+
     /*-------------------------url方法---------------------------*/
     //简化版获取url数据
     getUrlData:function(link){

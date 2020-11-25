@@ -54,7 +54,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    import util from '@/assets/js/util';
     import footer from '../../components/sc_footer/sc_footer';
     export default {
         name: 'navbar',
@@ -69,7 +69,12 @@
         },
         methods: {
             goCheck:function () {
-                this.$router.push('/check')
+                if(!util.m.getCookie('sc_token')){
+                    this.$router.push('/login')
+                }else{
+                    this.$router.push('/check')
+                }
+
             }
         }
     }

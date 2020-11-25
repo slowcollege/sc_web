@@ -1,5 +1,5 @@
 'use strict'
 module.exports = {
   NODE_ENV: '"production"',
-    BASE_URL: '"https://jd-test.jia-fu.cn/mall-service-"', // 新增 DEV
+    BASE_URL: '"http://182.92.173.111:3589/api/v1/"', // 新增 DEV
 }

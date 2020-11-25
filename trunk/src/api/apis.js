@@ -5,9 +5,9 @@ var usePrefix = process.env.BASE_URL;//user服务前缀
 
 
 
-// 商城首页登录验证接口说明
-export function loginCheck(params) {
-    return http.formpost(`${usePrefix}user/checkLogin`,params)
+//登录接口
+export function login(params) {
+    return http.loginpost(`${usePrefix}user/login`,params)
 }
 
 

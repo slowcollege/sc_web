@@ -113,7 +113,7 @@
     </div>
 </template>
 <script  type="text/ecmascript-6">
-
+    import util from '@/assets/js/util';
     export default{
         data() {
             return {
@@ -128,11 +128,22 @@
         },
         methods: {
             gotoMain: function () {
-                this.$router.push('/');
+                if(!util.m.getCookie('sc_token')){
+                    this.$router.push('/login')
+                }else{
+                    this.$router.push('/');
+                }
+
             },
 
             gotoMine: function () {
-                this.$router.push('/mine');
+                if(!util.m.getCookie('sc_token')){
+                    this.$router.push('/login')
+                }else{
+                    this.$router.push('/mine');
+                }
+
+
             }
         }
     };

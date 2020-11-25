@@ -5,11 +5,11 @@
                 <img alt="" border="0" src="https://qnimages.jia-fu.cn//jf-gift-manager/5368313db59ce828d0c4b75260b38d6b.jpeg">
             </div>
             <div class="login_content"><label for="phoneInput">
-                <input placeholder="请输入手机号码" type="text" pattern="[0-9]*" maxlength="11" id="phoneInput" class="login_content_name">
+                <input placeholder="请输入手机号码" type="text" pattern="[0-9]*" maxlength="11" id="phoneInput" class="login_content_name"  v-model='mobile' ref="mobile" @blur="onBlurInput()">
                 <img src="../../assets/icon/jf_gift_phone.png" class="login_name_pic">
                 <span class="login_wronginfo"></span>
             </label>
-                <label><input placeholder="请输入密码" type="text" pattern="[0-9]*" maxlength="6" id="codeInput" class="login_content_valiate">
+                <label><input placeholder="请输入密码" type="text" pattern="[0-9]*" maxlength="6" id="codeInput" class="login_content_valiate"  v-model='password' ref="password" @blur="onBlurInput()">
                     <img src="../../assets/icon/jf_gift_verification.png" class="login_valiate_pic">
                 </label>
                 <label class="login_btn" @click="login">
@@ -21,15 +21,53 @@
     </div>
 </template>
 <script type="text/ecmascript-6">
+    import {login} from '@/api/apis';
+    import util from '@/assets/js/util';
     export default {
         data() {
             return {
-                msg: 'hello vue'
+                mobile:'',
+                password:'123'
             }
+        },
+        created(){},
+        mounted(){
+
         },
         methods:{
             login:function () {
-                this.$router.push('/')
+                // this.$router.push('/');
+
+                if(!this.mobile){
+                    return
+                }
+                if(!this.password){
+                    return
+                }
+
+                let param = {
+                    mobile:this.mobile,
+                    password:this.password,
+                };
+                login(param).then((res)=>{
+                    util.m.addCookie('sc_token',res.data.token);
+                    this.$router.push('/');
+                }).catch(()=>{
+
+                });
+
+
+            },
+            //失去焦点的时候
+            onBlurInput: function () {
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                var input1 = document.getElementById('phoneInput');
+                var input2 = document.getElementById('codeInput');
+                input1.blur();
+                input2.blur();
+                this.$refs.phone.blur();
+                this.$refs.code.blur();
+                window.scroll(0, 0)
             }
         }
     }
