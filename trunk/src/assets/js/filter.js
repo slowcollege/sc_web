@@ -1,23 +1,21 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+/**
+ * Created by apple on 2018/7/10.
+ * vuejs 	过滤器
+ */
 
-Vue.config.productionTip = false;
-
-//css文件
-import './assets/css/normal.css';
+import Vue from 'vue';
+import util from './common';
 
 Vue.filter('formatDate', function (date) {
+
     let ret;
     let fmt = 'YYYY-MM-dd';
     const opt = {
         "Y+": date.getFullYear().toString(),        // 年
-        "M+": (date.getMonth() + 1).toString(),     // 月
+        "m+": (date.getMonth() + 1).toString(),     // 月
         "d+": date.getDate().toString(),            // 日
         "H+": date.getHours().toString(),           // 时
-        "m+": date.getMinutes().toString(),         // 分
+        "M+": date.getMinutes().toString(),         // 分
         "S+": date.getSeconds().toString()          // 秒
         // 有其他格式化字符需求可以继续添加，必须转化成字符串
     };
@@ -29,12 +27,3 @@ Vue.filter('formatDate', function (date) {
     }
     return fmt;
 });
-// Vue.use(MintUI);
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})

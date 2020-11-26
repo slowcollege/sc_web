@@ -33,10 +33,10 @@ service.interceptors.response.use(response => {
     //接收到响应数据并成功后的一些共有的处理，关闭loading等
     if(response.data.code === 3){
         console.log(response.data);
-        // M.removeLoading();
+        M.removeLoading();
         // M.showText('登录失效');
         // location.href = process.env.login;
-        // router.push('/login')
+        router.push('/login')
         return false;
     }else{
         console.log(response.data);
@@ -88,13 +88,12 @@ service.interceptors.response.use(response => {
             default:
                 showText = `系统异常`;
         }
-        // console.log(showText);
-        // M.showText(showText);
+        M.showText(showText);
     } else {
         // 超时处理
         console.log(error);
         if (JSON.stringify(error).includes('timeout')) {
-            // M.showText('服务器响应超时');
+            M.showText('服务器响应超时');
         }
         console.log('连接服务器失败')
     }

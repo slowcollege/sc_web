@@ -36,15 +36,13 @@
         },
         methods:{
             login:function () {
-                // this.$router.push('/');
-
+                util.m.showLoading();
                 if(!this.mobile){
                     return
                 }
                 if(!this.password){
                     return
                 }
-
                 let param = {
                     mobile:this.mobile,
                     password:this.password,
@@ -52,6 +50,7 @@
                 login(param).then((res)=>{
                     util.m.addCookie('sc_token',res.data.token);
                     this.$router.push('/');
+                    util.m.removeLoading();
                 }).catch(()=>{
 
                 });

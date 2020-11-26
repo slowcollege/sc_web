@@ -17,6 +17,10 @@ export function getClassStudent(params) {
 export function getStudentProfile(params) {
     return http.get(`${usePrefix}user/getStudentProfile`,params)
 }
+//待打卡列表查询
+export function getStudentTrainingTask(params) {
+    return http.get(`${usePrefix}user/getStudentTrainingTask`,params)
+}
 
 
 /*---------------------------其他模块---------------------------*/

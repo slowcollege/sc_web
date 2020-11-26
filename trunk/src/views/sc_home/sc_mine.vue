@@ -24,10 +24,6 @@
             </div>
         </div>
 
-
-
-
-
         <yls-footer :obj="{'one':'current_page','two':'current_page jd_tab_on'}"></yls-footer>
     </div>
 </template>
@@ -49,15 +45,17 @@
         },
         methods:{
             getProfileInfo:function () {
-
+                util.m.showLoading();
                 getStudentProfile().then(res=>{
-                    if(res.result){
-                        this.stuInfo = res.result;
+                    if(res.data){
+                        this.stuInfo = res.data;
                     }
+                    util.m.removeLoading();
                 }).catch()
             },
             outLogin:function () {
-
+                util.m.removeCookie('sc_token');
+                this.$router.push('/login')
             }
         }
     }

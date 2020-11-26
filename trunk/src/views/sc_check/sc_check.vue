@@ -9,79 +9,114 @@
             <div class="check_tips">每日习惯养成计划</div>
         </div>
 
-        <div class="check_list_item jf_flex_between">
+        <div class="check_list_item jf_flex_between" v-for="task in taskInfo">
             <div class="left_box">
                 <div>
-                    <input type="checkbox" class="ca_checkbox_input" checked="checked" disabled>
+                    <input type="checkbox" class="ca_checkbox_input" :checked="task.state" disabled>
                 </div>
             </div>
             <div class="right_box jf_flex_col">
                 <div class="check_title jf_flex_between">
-                    <div><i class="iconfont">&#xe6d1;</i>每天读1页书（非虚构书）</div>
+                    <div><i class="iconfont">&#xe6d1;</i>每天{{task.name}}{{task.target}}{{task.unit}}</div>
                     <div class="court">+1学分</div>
                 </div>
                 <div class="media_box jf_flex_start jf_flex_wrap">
-                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file" name=file accept="image/*" readonly></div>
-                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video" name=file accept="video/*" readonly></div>
+                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" name=file accept="image/*" readonly></div>
+                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" name=file accept="video/*" readonly></div>
                     <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>
                 </div>
 
-                <div class="remark_box">
+                <div class="remark_box" v-if="task.id === 1">
                     <div class="read_item">
                         读书 <input type="text"> 页
                     </div>
                 </div>
-
-            </div>
-        </div>
-        <div class="check_list_item jf_flex_between">
-            <div class="left_box">
-                <div>
-                    <input type="checkbox" class="ca_checkbox_input" disabled>
-                </div>
-            </div>
-            <div class="right_box jf_flex_col">
-                <div class="check_title jf_flex_between">
-                    <div><i class="iconfont">&#xe6d1;</i>每天写作50字</div>
-                    <div class="court">+1学分</div>
-                </div>
-                <div class="media_box jf_flex_start jf_flex_wrap">
-                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file1" name=file accept="image/*" readonly></div>
-                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video1" name=file accept="video/*" readonly></div>
-                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>
-                </div>
-
-                <div class="remark_box">
+                <div class="remark_box" v-else>
                     <div class="write_item">
                         <textarea name="ryn" id="b" cols="30" rows="10"></textarea>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="check_list_item jf_flex_between">
-            <div class="left_box">
-                <div>
-                    <input type="checkbox" class="ca_checkbox_input" checked="checked" disabled>
-                </div>
-            </div>
-            <div class="right_box jf_flex_col">
-                <div class="check_title jf_flex_between">
-                    <div><i class="iconfont">&#xe6d1;</i>每天1个俯卧撑</div>
-                    <div class="court">+1学分</div>
-                </div>
-                <div class="media_box jf_flex_start jf_flex_wrap">
-                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file2" name=file accept="image/*" readonly></div>
-                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video2" name=file accept="video/*" readonly></div>
-                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>
-                </div>
 
-                <div class="remark_box">
-                    <div class="write_item">
-                        <textarea name="ryn" id="a" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
             </div>
         </div>
+
+
+
+
+
+<!--        <div class="check_list_item jf_flex_between">-->
+<!--            <div class="left_box">-->
+<!--                <div>-->
+<!--                    <input type="checkbox" class="ca_checkbox_input" checked="checked" disabled>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="right_box jf_flex_col">-->
+<!--                <div class="check_title jf_flex_between">-->
+<!--                    <div><i class="iconfont">&#xe6d1;</i>每天读1页书（非虚构书）</div>-->
+<!--                    <div class="court">+1学分</div>-->
+<!--                </div>-->
+<!--                <div class="media_box jf_flex_start jf_flex_wrap">-->
+<!--                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file1" name=file accept="image/*" readonly></div>-->
+<!--                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video1" name=file accept="video/*" readonly></div>-->
+<!--                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>-->
+<!--                </div>-->
+
+<!--                <div class="remark_box">-->
+<!--                    <div class="read_item">-->
+<!--                        读书 <input type="text"> 页-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="check_list_item jf_flex_between">-->
+<!--            <div class="left_box">-->
+<!--                <div>-->
+<!--                    <input type="checkbox" class="ca_checkbox_input" disabled>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="right_box jf_flex_col">-->
+<!--                <div class="check_title jf_flex_between">-->
+<!--                    <div><i class="iconfont">&#xe6d1;</i>每天写作50字</div>-->
+<!--                    <div class="court">+1学分</div>-->
+<!--                </div>-->
+<!--                <div class="media_box jf_flex_start jf_flex_wrap">-->
+<!--                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file1" name=file accept="image/*" readonly></div>-->
+<!--                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video1" name=file accept="video/*" readonly></div>-->
+<!--                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>-->
+<!--                </div>-->
+
+<!--                <div class="remark_box">-->
+<!--                    <div class="write_item">-->
+<!--                        <textarea name="ryn" id="b" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="check_list_item jf_flex_between">-->
+<!--            <div class="left_box">-->
+<!--                <div>-->
+<!--                    <input type="checkbox" class="ca_checkbox_input" checked="checked" disabled>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="right_box jf_flex_col">-->
+<!--                <div class="check_title jf_flex_between">-->
+<!--                    <div><i class="iconfont">&#xe6d1;</i>每天1个俯卧撑</div>-->
+<!--                    <div class="court">+1学分</div>-->
+<!--                </div>-->
+<!--                <div class="media_box jf_flex_start jf_flex_wrap">-->
+<!--                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" id="file2" name=file accept="image/*" readonly></div>-->
+<!--                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" id="video2" name=file accept="video/*" readonly></div>-->
+<!--                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>-->
+<!--                </div>-->
+
+<!--                <div class="remark_box">-->
+<!--                    <div class="write_item">-->
+<!--                        <textarea name="ryn" id="a" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <div class="check_submit_btn">
             提交
@@ -89,13 +124,28 @@
     </div>
 </template>
 <script type="text/ecmascript-6">
+    import {getStudentTrainingTask} from '@/api/apis';
+    import util from '@/assets/js/util'
     export default {
         data() {
             return {
-                msg: 'hello vue'
+                taskInfo: []
             }
         },
+        mounted(){
+            this.getData();
+        },
         methods:{
+            //获取待打卡数据
+            getData:function(){
+                util.m.showLoading();
+                getStudentTrainingTask().then((res)=>{
+                    util.m.removeLoading();
+                    if(res.data){
+                        this.taskInfo = res.data;
+                    }
+                }).catch(err=>{})
+            },
             goBack:function () {
                 this.$router.go(-1);
             }

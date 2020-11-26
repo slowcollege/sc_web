@@ -7,18 +7,18 @@
             <div class="main_top_tip">{{listInfo.classDesc}}</div>
         </div>
         <div class="main_date_box jf_flex_between">
-            <i class="iconfont">&#xe766;</i>
-            <div class="date">{{date}}</div>
-            <i class="iconfont">&#xe765;</i>
+            <i class="iconfont" @click="changeDate(-1)">&#xe766;</i>
+            <div class="date">{{date | formatDate}}</div>
+            <i class="iconfont" @click="changeDate(1)">&#xe765;</i>
         </div>
 
-        <div class="list_item_box" v-for="stu in listInfo.student">
+        <div class="list_item_box" v-for="stu in studentsInfo">
             <div class="list_item_top jf_flex_between">
                 <div class="left_num"><div>{{stu.code}}</div></div>
                 <div class="right_box jf_flex_col">
                     <div class="top_box jf_flex_between">
                         <div class="info_box jf_flex_col">
-                            <div class="name">{{stu.name}} <span v-if="stu.duty">{{stu.duty}}</span></div>
+                            <div class="name">{{stu.name}} <span v-if="stu.duty">({{stu.duty}})</span></div>
                             <div class="experience">已学习{{stu.trainingDays}}天，获得{{stu.score}}积分</div>
                         </div>
                         <div class="btn_box jf_flex_between">
@@ -28,7 +28,10 @@
                         </div>
                     </div>
 
-                    <div class="media_box jf_flex_between">
+                    <div class="media_box jf_flex_start jf_flex_wrap">
+                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
+                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
+                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
                         <img class="media" src="../../assets/images/img_loading.gif" alt="">
@@ -36,17 +39,12 @@
                 </div>
             </div>
             <div class="list_item_bottom jf_flex_col">
-                <div class="done_item">读书5页</div>
-                <div class="done_item">写了关于沟通能力的内容</div>
-                <div class="done_item">俯卧撑10个</div>
+                <div class="done_item" v-for="target in stu.trainings">{{target.name}}{{target.target}}{{target.unit}}</div>
             </div>
         </div>
         <div class="empty_item"></div>
 
-        <div class="clock_btn" @click="goCheck">打卡</div>
-
-
-
+        <div class="clock_btn" @click="goCheck"></div>
 
         <yls-footer :obj="{'one':'current_page jd_tab_on','two':'current_page'}"></yls-footer>
     </div>
@@ -60,7 +58,7 @@
         name: 'navbar',
         data() {
             return {
-                date:'2020-11-24',
+                date:'',
                 studentsInfo:[],
                 listInfo:{}
             }
@@ -68,19 +66,26 @@
         components: {
             'yls-footer': footer,//tab组件
         },
-        creted(){},
+        created(){
+            this.initData();
+        },
         mounted(){
             this.getListInfo();
         },
         methods: {
+            initData:function(){
+                this.date = new Date();
+            },
+            //获取列表数据
             getListInfo:function(){
-                let param = {
-                    date:this.date
-                };
-                getClassStudent(param).then((res)=>{
-                    if(res.result){
-                        this.listInfo = res.result;
-                        this.studentsInfo = res.result.student;
+                util.m.showLoading();
+                this.studentsInfo = [];
+                this.listInfo = {};
+                getClassStudent({date:util.m.dateFormat(this.date)}).then((res)=>{
+                    util.m.removeLoading();
+                    if(res.data){
+                        this.listInfo = res.data;
+                        this.studentsInfo = res.data.student;
                     }
                 }).catch(err=>{
 
@@ -93,6 +98,25 @@
                     this.$router.push('/check')
                 }
 
+            },
+            //切换日期
+            changeDate:function (day) {
+                let tomorrow = this.getTomorrow();
+                let date = new Date(this.date);
+                date.setTime(date.getTime()+ day * (1000*60*60*24));
+                console.log(date);
+                if(util.m.dateFormat(date) === util.m.dateFormat(tomorrow)){
+                    util.m.showText('已经最新')
+                }else{
+                    this.date = new Date(date);
+                    this.getListInfo();
+                }
+            },
+            //获取明天的日期
+            getTomorrow:function () {
+                let today = new Date();
+                let tomorrow =  today.setTime(today.getTime()+ (1000*60*60*24));
+                return new Date(tomorrow);
             }
         }
     }
@@ -190,7 +214,9 @@
         padding: 10px 15px 10px 0;
     }
     .list_item_top .right_box .media_box .media{
-        width: 30%;
+        width: 20%;
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
     .list_item_bottom{
         padding-top: 10px;
