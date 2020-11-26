@@ -66,6 +66,7 @@ const http ={
     },
     //上传图片处理
     upload(url,data){
+        url = url+'?token='+m.getCookie('sc_token');
         const config = {
             method: 'post',
             url:url,

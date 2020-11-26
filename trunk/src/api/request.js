@@ -36,7 +36,7 @@ service.interceptors.response.use(response => {
         M.removeLoading();
         // M.showText('登录失效');
         // location.href = process.env.login;
-        router.push('/login')
+        router.push('/login');
         return false;
     }else{
         console.log(response.data);

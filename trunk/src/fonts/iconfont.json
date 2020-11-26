@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1495449",
+      "name": "学士帽",
+      "font_class": "xueshimao",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "1495454",
+      "name": "学士帽-实",
+      "font_class": "xueshimao-shi",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "8145806",
+      "name": "上传视频",
+      "font_class": "shangchuanshipin",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8328457",
+      "name": "实景酷-人数",
+      "font_class": "renshu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "436018",
       "name": "运动",
       "font_class": "yundong",

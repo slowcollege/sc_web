@@ -29,7 +29,7 @@ Vue.filter('formatDate', function (date) {
     }
     return fmt;
 });
-// Vue.use(MintUI);
+
 
 /* eslint-disable no-new */
 new Vue({

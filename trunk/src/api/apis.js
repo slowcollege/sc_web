@@ -21,6 +21,14 @@ export function getStudentProfile(params) {
 export function getStudentTrainingTask(params) {
     return http.get(`${usePrefix}user/getStudentTrainingTask`,params)
 }
+//待打卡列表查询
+export function submitStudentTraining(params) {
+    return http.post(`${usePrefix}user/submitStudentTraining`,params)
+}
+//上传图片
+export function uploadImg(params) {
+    return http.upload(`${usePrefix}/file/uploadImg`,params)
+}
 
 
 /*---------------------------其他模块---------------------------*/

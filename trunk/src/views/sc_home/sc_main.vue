@@ -1,10 +1,11 @@
 <template>
     <div class="container">
         <div class="main_top_box">
-<!--            <div class="main_top_name">我的班</div>-->
-<!--            <div class="main_top_tip">种一棵树最好的时间是十年前，其次是现在。</div>-->
-            <div class="main_top_name">{{listInfo.className}}</div>
-            <div class="main_top_tip">{{listInfo.classDesc}}</div>
+            <div class="main_top_name">我的{{listInfo.className}}</div>
+<!--            <div class="main_top_name">{{listInfo.className}}</div>-->
+            <div class="main_top_tip">种一棵树最好的时间是十年前，其次是现在。</div>
+
+<!--            <div class="main_top_tip">{{listInfo.classDesc}}</div>-->
         </div>
         <div class="main_date_box jf_flex_between">
             <i class="iconfont" @click="changeDate(-1)">&#xe766;</i>
@@ -22,29 +23,40 @@
                             <div class="experience">已学习{{stu.trainingDays}}天，获得{{stu.score}}积分</div>
                         </div>
                         <div class="btn_box jf_flex_between">
-                            <i class="iconfont">&#xe6d1;</i>
-                            <i class="iconfont">&#xe762;</i>
-                            <i class="iconfont">&#xe807;</i>
+                            <div  v-for="item in stu.trainings">
+                                <i class="iconfont" v-if="item.id===1" :class="item.state?'orange':''">&#xe6d1;</i>
+                                <i class="iconfont" v-if="item.id===2" :class="item.state?'orange':''">&#xe762;</i>
+                                <i class="iconfont" v-if="item.id===3" :class="item.state?'orange':''">&#xe807;</i>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="media_box jf_flex_start jf_flex_wrap">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
-                        <img class="media" src="../../assets/images/img_loading.gif" alt="">
+                    <div class="media_box jf_flex_start jf_flex_wrap" v-if="stu.imgList && stu.imgList.length!==0 && stu.videoList && stu.videoList.length!==0 ">
+                        <div class="media_box"  v-for="img in stu.imgList">
+                            <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
+                        </div>
+                        <div class="media_box"  v-for="video in stu.videoList">
+                            <video class="media" :src="video" controls="controls">
+                                您的浏览器不支持 video 标签。
+                            </video>
+                        </div>
+
+
+<!--                        <img class="media" src="../../assets/images/img_loading.gif" alt="">-->
+<!--                        <img class="media" src="../../assets/images/img_loading.gif" alt="">-->
+<!--                        <img class="media" src="../../assets/images/img_loading.gif" alt="">-->
+<!--                        <img class="media" src="../../assets/images/img_loading.gif" alt="">-->
+<!--                        <img class="media" src="../../assets/images/img_loading.gif" alt="">-->
                     </div>
                 </div>
             </div>
             <div class="list_item_bottom jf_flex_col">
-                <div class="done_item" v-for="target in stu.trainings">{{target.name}}{{target.target}}{{target.unit}}</div>
+                <div class="done_item" v-for="target in stu.trainings" v-if="target.state">{{target.name}}{{target.target}}{{target.unit}}</div>
             </div>
         </div>
         <div class="empty_item"></div>
 
-        <div class="clock_btn" @click="goCheck"></div>
+        <div class="clock_btn" @click.prevent.stop="goCheck"></div>
 
         <yls-footer :obj="{'one':'current_page jd_tab_on','two':'current_page'}"></yls-footer>
     </div>
@@ -86,6 +98,20 @@
                     if(res.data){
                         this.listInfo = res.data;
                         this.studentsInfo = res.data.student;
+
+                        for(let val of this.studentsInfo){
+                            val.imgList = [];
+                            val.videoList = [];
+                            for(let trans of val.trainings){
+                               if(trans.imgList && trans.imgList.length !==0){
+                                   val.imgList = val.imgList.concat(trans.imgList);
+                               }
+                               if(trans.videoUrl){
+                                   val.videoList.push(trans.videoUrl);
+                               }
+                            }
+                        }
+                        util.m.log( this.studentsInfo)
                     }
                 }).catch(err=>{
 
@@ -199,6 +225,8 @@
     .list_item_top .right_box .btn_box i{
         padding: 10px;
         font-size: 20px;
+    }
+    .list_item_top .right_box .btn_box i.orange{
         color: orange;
     }
     .list_item_top .right_box .name{
@@ -213,10 +241,16 @@
     .list_item_top .right_box .media_box{
         padding: 10px 15px 10px 0;
     }
-    .list_item_top .right_box .media_box .media{
-        width: 20%;
+    .list_item_top .right_box .media_box .media_box{
+        width: calc(20vw - 21px);
+        height: calc(20vw - 21px);
         margin-right: 10px;
         margin-bottom: 10px;
+    }
+    .list_item_top .right_box .media_box .media_box .media{
+        width: 100%;
+        height: 100%;
+        border: none;
     }
     .list_item_bottom{
         padding-top: 10px;

@@ -5,12 +5,14 @@
         <div class="mine_content">
             <div class="mine_info_box jf_flex_between">
                 <div class="head_info_box">
-                    <img class="inner" :src="stuInfo.image"/>
+<!--                    <img class="inner" :src="stuInfo.image"/>-->
+                    <div class="inner"></div>
                 </div>
                 <div class="user_info_box jf_flex_col">
                     <div class="user_name">{{stuInfo.name}}</div>
-                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">{{stuInfo.className}}</div>
-                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">学号：{{stuInfo.code}}</div>
+<!--                    <div class="user_info_line jf_flex_start"><img src="../../assets/icon/main_home_gray.png" alt="">{{ stuInfo.className}}</div>-->
+                    <div class="user_info_line jf_flex_start"><i class="iconfont">&#xe665;</i>{{stuInfo.className}}</div>
+                    <div class="user_info_line jf_flex_start"><i class="iconfont">&#xe611;</i>学号：{{stuInfo.code}}</div>
                 </div>
             </div>
 
@@ -112,10 +114,10 @@
     .user_info_line{
         width: 100%;
     }
-    .user_info_line img{
-        width: 18px;
-        height: 18px;
-        margin-right: 10px;
+    .user_info_line .iconfont{
+        /*width: 18px;*/
+        /*height: 18px;*/
+        margin-right: 8px;
     }
     .mine_func_line{
         padding: 10px 15px;

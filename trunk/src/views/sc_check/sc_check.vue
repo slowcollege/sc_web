@@ -5,7 +5,7 @@
         </div>
 
         <div class="check_top_box jf_flex_col">
-            <div class="check_date">2020.11.13</div>
+            <div class="check_date">{{date | formatDate}}</div>
             <div class="check_tips">每日习惯养成计划</div>
         </div>
 
@@ -17,23 +17,32 @@
             </div>
             <div class="right_box jf_flex_col">
                 <div class="check_title jf_flex_between">
-                    <div><i class="iconfont">&#xe6d1;</i>每天{{task.name}}{{task.target}}{{task.unit}}</div>
+                    <div>
+                        <i class="iconfont">&#xe6d1;</i>
+                        每天{{task.name}}{{task.target}}{{task.unit}}</div>
                     <div class="court">+1学分</div>
                 </div>
                 <div class="media_box jf_flex_start jf_flex_wrap">
-                    <div class="media_item_box"> <div class="file_bg"></div> <input type="file" class="file" name=file accept="image/*" readonly></div>
-                    <div class="media_item_box"> <div class="video_bg"></div> <input type="file" class="file" name=file accept="video/*" readonly></div>
-                    <div class="media_item_box" v-for="it in 4"><img class="media" src="../../assets/images/img_loading.gif" alt=""></div>
+                    <div class="media_item_box" v-for="img in task.imgList"><img class="media" :src="img" alt=""></div>
+                    <div class="media_item_box">
+                        <div class="file_bg"></div>
+                        <input type="file" class="file" name=file accept="image/*" :id="'img_'+task.id" :ref="'img_'+task.id" @change="uploadImageChange(task.id)"  multiple="multiple" readonly>
+                    </div>
+                    <div class="media_item_box">
+                        <div class="video_bg"></div>
+                        <input type="file" class="file" accept="video/*" :id="'video_'+task.id" @change="uploadVideoChange(task.id)" readonly>
+                    </div>
+
                 </div>
 
                 <div class="remark_box" v-if="task.id === 1">
                     <div class="read_item">
-                        读书 <input type="text"> 页
+                        读书<input type="text" v-model="task.achievement"> 页
                     </div>
                 </div>
                 <div class="remark_box" v-else>
                     <div class="write_item">
-                        <textarea name="ryn" id="b" cols="30" rows="10"></textarea>
+                        <textarea name="ryn" id="b" cols="30" rows="10" v-model="task.desc"></textarea>
                     </div>
                 </div>
 
@@ -118,18 +127,20 @@
 <!--            </div>-->
 <!--        </div>-->
 
-        <div class="check_submit_btn">
+        <div class="check_submit_btn" @click="check">
             提交
         </div>
     </div>
 </template>
 <script type="text/ecmascript-6">
-    import {getStudentTrainingTask} from '@/api/apis';
+    import {getStudentTrainingTask,uploadImg,submitStudentTraining} from '@/api/apis';
     import util from '@/assets/js/util'
     export default {
         data() {
             return {
-                taskInfo: []
+                date:new Date(),
+                taskInfo: [],
+                checkInfo:[]
             }
         },
         mounted(){
@@ -140,14 +151,67 @@
             getData:function(){
                 util.m.showLoading();
                 getStudentTrainingTask().then((res)=>{
-                    util.m.removeLoading();
+
                     if(res.data){
                         this.taskInfo = res.data;
+                        for(let val of this.taskInfo){
+                            val.content = '';
+                            val.desc = '';
+                            if(!val.imgList) {
+                                val.imgList= [];
+                            }
+                            if(!val.videoUrl) {
+                                val.videoUrl= [];
+                            }
+                        }
                     }
+                    util.m.removeLoading();
                 }).catch(err=>{})
             },
             goBack:function () {
                 this.$router.go(-1);
+            },
+            //上传图片
+            uploadImageChange:function (id) {
+                let filesArr = event.target.files;
+                console.log(filesArr);
+                var formData = new FormData();
+                for(let val of filesArr){
+                    formData.append(val.name,val);
+                }
+
+                uploadImg(formData).then(res=>{
+                    for(let item of this.taskInfo){
+                        if(item.id === id){
+                            item.imgList.push(res.msg);
+                        }
+                    }
+                    console.log(this.taskInfo);
+                    this.$forceUpdate();
+                }).catch()
+            },
+            //上传视频
+            uploadVideoChange:function (id) {
+
+            },
+            //打卡
+            check:function () {
+                util.m.showLoading();
+                this.checkInfo = [];
+                for(let val of this.taskInfo){
+                   let item = {
+                       id:val.id,
+                       achievement:val.achievement,
+                       imgList:val.imgList,
+                       videoUrl:val.videoUrl,
+                       desc:val.desc,
+                   };
+                    this.checkInfo.push(item);
+                }
+
+                submitStudentTraining({trainings:this.checkInfo}).then(res=>{
+                    util.m.removeLoading();
+                }).catch(err=>{})
             }
         }
     }
