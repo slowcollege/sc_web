@@ -35,7 +35,15 @@
 
                 </div>
 
-                <div class="remark_box" v-if="task.id === 1">
+                <div class="remark_box">
+                    <div class="write_item remark_item">
+                        <textarea name="ryn" id="b" cols="30" rows="10" v-model="task.desc"></textarea>
+                    </div>
+                    <div class="read_item">
+                        {{task.name}}<input type="text" v-model="task.achievement"> {{task.unit}}
+                    </div>
+                </div>
+                <!-- <div class="remark_box" v-if="task.id === 1">
                     <div class="read_item">
                         读书<input type="text" v-model="task.achievement"> 页
                     </div>
@@ -44,7 +52,7 @@
                     <div class="write_item">
                         <textarea name="ryn" id="b" cols="30" rows="10" v-model="task.desc"></textarea>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -211,6 +219,11 @@
 
                 submitStudentTraining({trainings:JSON.stringify(this.checkInfo)}).then(res=>{
                     util.m.removeLoading();
+                    if(!util.m.getCookie('sc_token')){
+                        this.$router.push('/login')
+                    }else{
+                        this.$router.push('/');
+                    }
                 }).catch(err=>{})
             }
         }
@@ -343,6 +356,9 @@
         padding: 5px;
         min-height: 60px;
         border: 1px solid #8a8a8a;
+    }
+    .check_list_item .right_box .remark_box .remark_item{
+        margin-bottom: 10px;
     }
     .check_list_item .right_box .remark_box .write_item textarea{
         width: 100%;
