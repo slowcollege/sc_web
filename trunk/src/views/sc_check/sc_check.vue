@@ -203,13 +203,13 @@
                        id:val.id,
                        achievement:val.achievement,
                        imgList:val.imgList,
-                       videoUrl:val.videoUrl,
+                       videoUrl:val.videoUrl && val.videoUrl.length ? val.videoUrl[0] : '',
                        desc:val.desc,
                    };
-                    this.checkInfo.push(item);
+                   if (item.achievement) this.checkInfo.push(item);
                 }
 
-                submitStudentTraining({trainings:this.checkInfo}).then(res=>{
+                submitStudentTraining({trainings:JSON.stringify(this.checkInfo)}).then(res=>{
                     util.m.removeLoading();
                 }).catch(err=>{})
             }

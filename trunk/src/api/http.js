@@ -38,6 +38,23 @@ const http ={
         return request(config)
     },
     //formdata格式的调用
+    postParamStr(url,params){
+        params.token = m.getCookie('sc_token') || null;
+        let str = '';
+        for (let name in params) {
+            str += '&' + name + '=' + params[name];
+        }
+        const config = {
+            method: 'post',
+            url:url,
+            headers:{
+                'Content-Type':'application/x-www-form-urlencoded'
+            },
+            data:str.substring(1)
+        };
+        return request(config)
+    },
+    //formdata格式的调用
     formpost(url,params){
         if(!params)params = {};
         params.token = m.getCookie('sc_token') || null;

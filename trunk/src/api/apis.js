@@ -23,7 +23,7 @@ export function getStudentTrainingTask(params) {
 }
 //待打卡列表查询
 export function submitStudentTraining(params) {
-    return http.post(`${usePrefix}user/submitStudentTraining`,params)
+    return http.postParamStr(`${usePrefix}user/submitStudentTraining`,params)
 }
 //上传图片
 export function uploadImg(params) {
