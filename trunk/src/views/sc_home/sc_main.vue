@@ -31,8 +31,8 @@
                         </div>
                     </div>
 
-                    <div class="media_box jf_flex_start jf_flex_wrap" v-if="stu.imgList && stu.imgList.length!==0 && stu.videoList && stu.videoList.length!==0 ">
-                        <div class="media_box"  v-for="img in stu.imgList">
+                    <div class="media_box jf_flex_start jf_flex_wrap" v-if="(stu.imgList && stu.imgList.length!==0) || (stu.videoList && stu.videoList.length!==0) ">
+                        <div class="media_box"  v-for="img in stu.imgList" v-if="img">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
                         </div>
                         <div class="media_box"  v-for="video in stu.videoList">
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="list_item_bottom jf_flex_col">
-                <div class="done_item" v-for="target in stu.trainings" v-if="target.state">{{target.name}}{{target.target}}{{target.unit}}</div>
+                <div class="done_item" v-for="target in stu.trainings" v-if="target.state">{{target.name}}{{ target.achievement || 0 }}{{target.unit}}</div>
             </div>
         </div>
         <div class="empty_item"></div>
@@ -104,14 +104,17 @@
                             val.videoList = [];
                             for(let trans of val.trainings){
                                if(trans.imgList && trans.imgList.length !==0){
-                                   val.imgList = val.imgList.concat(trans.imgList);
+                                   /* val.imgList = val.imgList.concat(trans.imgList); */
+                                   trans.imgList.forEach(item => {
+                                       if (item) val.imgList.push(item);
+                                   });
                                }
                                if(trans.videoUrl){
                                    val.videoList.push(trans.videoUrl);
                                }
                             }
                         }
-                        util.m.log( this.studentsInfo)
+                        /*util.m.log( this.studentsInfo)*/
                     }
                 }).catch(err=>{
 
