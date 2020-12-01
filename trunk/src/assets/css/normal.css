@@ -381,3 +381,34 @@ footer.bottom_tabbar .bottom_tabbar_contain a.current_page.jd_tab_on p {
     -webkit-align-items: stretch;
     align-items: stretch;
 }
+.sc_img_bg{
+    width: calc(100vw);
+    height: calc(100vh);
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1010;
+}
+.sc_img_bg .img{
+    position: fixed;
+    left: 0;
+    top: calc(50vh - 50vw);;
+    right: 0;
+    width: calc(100vw);
+    height: calc(100vw);
+    z-index: 1011;
+}
+.sc_img_bg .close{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1011;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}

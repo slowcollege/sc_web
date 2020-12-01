@@ -1,7 +1,6 @@
 /**
  * Created by apple on 2020/11/24.
  */
-// import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import {Indicator,Toast} from 'mint-ui'
 var Rxports = {

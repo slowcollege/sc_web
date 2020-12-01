@@ -47,5 +47,13 @@ export default new Router({
           },
           component: resolve => require(['@/views/sc_login/sc_login'], resolve),
       },
+      {
+          path: '/test',
+          name: 'test',
+          meta: {
+              title: 'test',
+          },
+          component: resolve => require(['@/views/sc_test/sc_test'], resolve),
+      },
   ]
 })

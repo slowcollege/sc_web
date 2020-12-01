@@ -31,7 +31,7 @@ service.interceptors.request.use(config => {
 // 3.响应拦截器
 service.interceptors.response.use(response => {
     //接收到响应数据并成功后的一些共有的处理，关闭loading等
-    if(response.data.code === 3){
+    if(response.data.code === 2){
         console.log(response.data);
         M.removeLoading();
         // M.showText('登录失效');

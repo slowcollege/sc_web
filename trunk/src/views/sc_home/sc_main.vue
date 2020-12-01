@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="#container">
         <div class="main_top_box">
             <div class="main_top_name">我的{{listInfo.className}}</div>
 <!--            <div class="main_top_name">{{listInfo.className}}</div>-->
@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="media_box jf_flex_start jf_flex_wrap" v-if="(stu.imgList && stu.imgList.length!==0) || (stu.videoList && stu.videoList.length!==0) ">
-                        <div class="media_box"  v-for="img in stu.imgList" v-if="img">
+                        <div class="media_box"  v-for="img in stu.imgList" v-if="img" @click="showImg(img)">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
                         </div>
                         <div class="media_box"  v-for="video in stu.videoList">
@@ -66,6 +66,7 @@
     import util from '@/assets/js/util';
     import footer from '../../components/sc_footer/sc_footer';
     import {getClassStudent} from '@/api/apis';
+    // import {init} from '@/assets/js/showImgs';
     export default {
         name: 'navbar',
         data() {
@@ -146,6 +147,11 @@
                 let today = new Date();
                 let tomorrow =  today.setTime(today.getTime()+ (1000*60*60*24));
                 return new Date(tomorrow);
+            },
+
+            showImg:function (img) {
+                console.log(img);
+                util.si.init(img);
             }
         }
     }
@@ -291,4 +297,23 @@
         left: calc(50vw - 40px);
         z-index:1000;
     }
+
+    /*.sc_img_bg{*/
+    /*    width: calc(100vw);*/
+    /*    height: calc(100vh);*/
+    /*    background-color: rgba(0,0,0,.3);*/
+    /*    position: fixed;*/
+    /*    left: 0;*/
+    /*    top: 0;*/
+    /*    z-index: 1010;*/
+    /*}*/
+    /*.sc_img_bg .img{*/
+    /*    position: absolute;*/
+    /*    left: 0;*/
+    /*    top: 0;*/
+    /*    right: 0;*/
+    /*    bottom: 0;*/
+    /*    width: calc(100vw);*/
+    /*    height: calc(100vw);*/
+    /*}*/
 </style>
