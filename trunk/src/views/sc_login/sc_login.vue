@@ -2,7 +2,7 @@
     <div>
         <div class="jf_gift_register">
             <div class="login_banner">
-                <img alt="" border="0" src="https://qnimages.jia-fu.cn//jf-gift-manager/5368313db59ce828d0c4b75260b38d6b.jpeg">
+                <img alt="" border="0" src="https://media.61huoban.com/sclogo.jpeg">
             </div>
             <div class="login_content"><label for="phoneInput">
                 <input placeholder="请输入手机号码" type="text" pattern="[0-9]*" maxlength="11" id="phoneInput" class="login_content_name"  v-model='mobile' ref="mobile" @blur="onBlurInput()">
