@@ -1,5 +1,15 @@
 <template>
+<<<<<<< HEAD
+    <div class="container">
+        <div class="pop_image" v-show="popImage.show" @click="popImage.show=false,popImage.imageUrl=''">
+            <div>
+              <img :src="popImage.imageUrl" v-if="popImage.type==1">
+              <video :src="popImage.imageUrl" v-if="popImage.type==2" autoplay="true" @click.stop> </video>
+            </div>
+        </div>
+=======
     <div class="container" id="#container">
+>>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
         <div class="main_top_box">
             <div class="main_top_name">我的{{listInfo.className}}</div>
 <!--            <div class="main_top_name">{{listInfo.className}}</div>-->
@@ -24,19 +34,28 @@
                         </div>
                         <div class="btn_box jf_flex_between">
                             <div  v-for="item in stu.trainings">
-                                <i class="iconfont" v-if="item.id===1" :class="item.state?'orange':''">&#xe6d1;</i>
-                                <i class="iconfont" v-if="item.id===2" :class="item.state?'orange':''">&#xe762;</i>
-                                <i class="iconfont" v-if="item.id===3" :class="item.state?'orange':''">&#xe807;</i>
+                              <!--  <i class="iconfont" v-if="item.id===1" :class="item.state?'orange':''">&#xe6d1;</i>写作
+                                <i class="iconfont" v-if="item.id===2" :class="item.state?'orange':''">&#xe762;</i> 读书
+                                <i class="iconfont" v-if="item.id===3" :class="item.state?'orange':''">&#xe807;</i> 运动
+                                -->
+                                <i class="iconfont" v-if="item.id===1" :class="item.state?'orange':''">&#xe762;</i>
+                                <i class="iconfont" v-if="item.id===2" :class="item.state?'orange':''">&#xe807;</i>
+                                <i class="iconfont" v-if="item.id===3" :class="item.state?'orange':''">&#xe6d1;</i>
                             </div>
                         </div>
                     </div>
 
                     <div class="media_box jf_flex_start jf_flex_wrap" v-if="(stu.imgList && stu.imgList.length!==0) || (stu.videoList && stu.videoList.length!==0) ">
+<<<<<<< HEAD
+                        <div class="media_box"  v-for="img in stu.imgList" v-if="img">
+                            <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img+'>square200'" @click="onClickMedia(1,img)">
+=======
                         <div class="media_box"  v-for="img in stu.imgList" v-if="img" @click="showImg(img)">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
+>>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
                         </div>
                         <div class="media_box"  v-for="video in stu.videoList">
-                            <video class="media" :src="video" controls="controls">
+                            <video class="media" :src="video"   @click="onClickMedia(2,video)">
                                 您的浏览器不支持 video 标签。
                             </video>
                         </div>
@@ -71,6 +90,7 @@
         name: 'navbar',
         data() {
             return {
+                popImage:{show:false,imageUrl:"",type:0},
                 date:'',
                 studentsInfo:[],
                 listInfo:{}
@@ -88,6 +108,12 @@
         methods: {
             initData:function(){
                 this.date = new Date();
+            },
+
+            onClickMedia:function(type,url){
+              this.popImage.type=type;
+              this.popImage.imageUrl=url;
+              this.popImage.show=true;
             },
             //获取列表数据
             getListInfo:function(){
@@ -297,6 +323,29 @@
         left: calc(50vw - 40px);
         z-index:1000;
     }
+<<<<<<< HEAD
+    .pop_image{
+      position: fixed;
+      display:table;
+      width: 100%;
+      height: 100%;
+      background:rgba(0,0,0,.6);
+      z-index: 750;
+    }
+    .pop_image>div{
+       display: table-cell;
+       vertical-align: middle;
+     }
+    .pop_image>div>img,.pop_image>div>video{
+      display: block;
+      width:auto;
+      height:auto;
+
+      max-width: 80%;
+      max-height:80%;
+      margin:0 auto;
+    }
+=======
 
     /*.sc_img_bg{*/
     /*    width: calc(100vw);*/
@@ -316,4 +365,5 @@
     /*    width: calc(100vw);*/
     /*    height: calc(100vw);*/
     /*}*/
+>>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
 </style>
