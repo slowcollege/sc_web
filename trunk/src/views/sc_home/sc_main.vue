@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
     <div class="container">
         <div class="pop_image" v-show="popImage.show" @click="popImage.show=false,popImage.imageUrl=''">
             <div>
@@ -7,9 +7,8 @@
               <video :src="popImage.imageUrl" v-if="popImage.type==2" autoplay="true" @click.stop> </video>
             </div>
         </div>
-=======
-    <div class="container" id="#container">
->>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
+
+
         <div class="main_top_box">
             <div class="main_top_name">我的{{listInfo.className}}</div>
 <!--            <div class="main_top_name">{{listInfo.className}}</div>-->
@@ -46,13 +45,11 @@
                     </div>
 
                     <div class="media_box jf_flex_start jf_flex_wrap" v-if="(stu.imgList && stu.imgList.length!==0) || (stu.videoList && stu.videoList.length!==0) ">
-<<<<<<< HEAD
+
                         <div class="media_box"  v-for="img in stu.imgList" v-if="img">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img+'>square200'" @click="onClickMedia(1,img)">
-=======
                         <div class="media_box"  v-for="img in stu.imgList" v-if="img" @click="showImg(img)">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
->>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
                         </div>
                         <div class="media_box"  v-for="video in stu.videoList">
                             <video class="media" :src="video"   @click="onClickMedia(2,video)">
@@ -323,7 +320,7 @@
         left: calc(50vw - 40px);
         z-index:1000;
     }
-<<<<<<< HEAD
+
     .pop_image{
       position: fixed;
       display:table;
@@ -345,7 +342,7 @@
       max-height:80%;
       margin:0 auto;
     }
-=======
+
 
     /*.sc_img_bg{*/
     /*    width: calc(100vw);*/
@@ -365,5 +362,5 @@
     /*    width: calc(100vw);*/
     /*    height: calc(100vw);*/
     /*}*/
->>>>>>> 6bb3cce6a869611e3e7ddd1325ebf569ddc9ef6b
+
 </style>
