@@ -48,6 +48,7 @@
 
                         <div class="media_box"  v-for="img in stu.imgList" v-if="img">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img+'>square200'" @click="onClickMedia(1,img)">
+						</div>
                         <div class="media_box"  v-for="img in stu.imgList" v-if="img" @click="showImg(img)">
                             <img class="media" data-src="../../assets/images/img_loading.gif" alt="" :src="img">
                         </div>
