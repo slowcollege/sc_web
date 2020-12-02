@@ -1,5 +1,13 @@
 <template>
     <div class="container">
+      <div class="pop_image" v-show="popImage.show" @click="popImage.show=false,popImage.imageUrl=''">
+          <div>
+
+            <img :src="popImage.imageUrl" v-if="popImage.type==1">
+            <video :src="popImage.imageUrl" v-if="popImage.type==2" autoplay="true" @click.stop> </video>
+          </div>
+      </div>
+
         <div class="check_nav">
             <i class="iconfont" @click="goBack">&#xe766;</i>
         </div>
@@ -23,18 +31,24 @@
                     <div class="court">+1学分</div>
                 </div>
                 <div class="media_box jf_flex_start jf_flex_wrap">
-                    <div class="media_item_box" v-for="img in task.imgList"><img class="media" :src="img" alt=""></div>
+                    <div class="media_item_box" v-for="(img,index1) in task.imgList" :key="index1">
+                        <img class="media" :src="img" alt="" @click="clickMedia(1,img)">
+                    </div>
+                    <div class="media_item_box" v-for="(img1,index) in task.videoUrl" :key="index">
+                        <video class="media" :src="img1" @click="clickMedia(2,img1)"></video>
+                    </div>
                     <div class="media_item_box">
                         <div class="file_bg"></div>
                         <input type="file" class="file" name=file accept="image/*" :id="'img_'+task.id" :ref="'img_'+task.id" @change="uploadImageChange(task.id)"  multiple="multiple" readonly>
                     </div>
+
+
                     <div class="media_item_box">
                         <div class="video_bg"></div>
                         <input type="file" class="file" accept="video/*" :id="'video_'+task.id" @change="uploadVideoChange(task.id)" readonly>
                     </div>
 
                 </div>
-
                 <div class="remark_box">
                     <div class="write_item remark_item">
                         <textarea name="ryn" id="b" cols="30" rows="10" v-model="task.desc"></textarea>
@@ -146,6 +160,7 @@
     export default {
         data() {
             return {
+              popImage:{show:false,imageUrl:"",type:0},
                 date:new Date(),
                 taskInfo: [],
                 checkInfo:[]
@@ -156,6 +171,11 @@
         },
         methods:{
             //获取待打卡数据
+            clickMedia:function(type,url){
+              this.popImage.type=type;
+              this.popImage.imageUrl=url;
+              this.popImage.show=true;
+            },
             getData:function(){
                 util.m.showLoading();
                 getStudentTrainingTask().then((res)=>{
@@ -200,7 +220,22 @@
             },
             //上传视频
             uploadVideoChange:function (id) {
+            let filesArr = event.target.files;
+                console.log(filesArr);
+                var formData = new FormData();
+                for(let val of filesArr){
+                    formData.append(val.name,val);
+                }
 
+                uploadImg(formData).then(res=>{
+                    for(let item of this.taskInfo){
+                        if(item.id === id){
+                            item.videoUrl.push(res.msg);
+                        }
+                    }
+                    console.log(this.taskInfo);
+                    this.$forceUpdate();
+                }).catch()
             },
             //打卡
             check:function () {
@@ -214,7 +249,7 @@
                        videoUrl:val.videoUrl && val.videoUrl.length ? val.videoUrl[0] : '',
                        desc:val.desc,
                    };
-                   if (item.achievement) this.checkInfo.push(item);
+                   if (item.achievement||item.videoUrl||item.desc||(item.imgList&&item.imgList.length)) this.checkInfo.push(item);
                 }
 
                 submitStudentTraining({trainings:JSON.stringify(this.checkInfo)}).then(res=>{
@@ -420,4 +455,27 @@
         border-radius: 22.5px;
 
     }
+
+    .pop_image{
+      position: fixed;
+      display:table;
+      width: 100%;
+      height: 100%;
+      background:rgba(0,0,0,.6);
+      z-index: 750;
+    }
+    .pop_image>div{
+       display: table-cell;
+       vertical-align: middle;
+     }
+    .pop_image>div>img,.pop_image>div>video{
+      display: block;
+      width:auto;
+      height:auto;
+
+      max-width: 80%;
+      max-height:80%;
+      margin:0 auto;
+    }
+
 </style>
