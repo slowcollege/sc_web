@@ -31,15 +31,15 @@ service.interceptors.request.use(config => {
 // 3.响应拦截器
 service.interceptors.response.use(response => {
     //接收到响应数据并成功后的一些共有的处理，关闭loading等
-    if(response.data.code === 2){
+    if(response.data.code > 1 && response.data.code < 10){
         console.log(response.data);
         M.removeLoading();
         // M.showText('登录失效');
         // location.href = process.env.login;
         router.push('/login');
         return false;
-    }else{
-        console.log(response.data);
+    } else{
+        // console.log(response.data);
         return response.data
     }
 }, error => {
